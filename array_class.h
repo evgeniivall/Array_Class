@@ -1,6 +1,6 @@
 #ifndef ARRAY_CLASS_H
 #define ARRAY_CLASS_H
-
+#include "iterator.h"
 #include <iostream>
 template <class Array_Type, std::size_t Array_Size>
 struct Array
@@ -30,6 +30,18 @@ struct Array
     const Array_Type* data() const;
 
     //ITERATOR
+
+    iterator<Array_Type> begin()
+    {
+        iterator<Array_Type> it(data_);
+        return it;
+    }
+
+    iterator<Array_Type> end()
+    {
+        iterator<Array_Type> it(&data_[Array_Size]);
+        return it;
+    }
 
     //CAPACITY
 

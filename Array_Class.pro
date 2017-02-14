@@ -13,4 +13,5 @@ SOURCES += main.cpp
 
 HEADERS += \
     array_class.h \
-    array_class_impl.h
+    array_class_impl.h \
+    iterator.h
